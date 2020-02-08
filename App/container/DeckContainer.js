@@ -10,13 +10,16 @@ export default class DeckContainer extends PersistContainer {
         super(props);
 
         this.state = {
-            decks: []
+            decks: deck
         }
     }
-
 
 	persist = {
 		key: "Deck",
 		storage: AsyncStorage
+    }
+
+    getDecks = () => {
+        return this.state.decks;
     }
 }
