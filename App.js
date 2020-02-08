@@ -5,10 +5,12 @@ import {Provider} from "unstated";
 
 import ScreenDeck from "./App/screens/ScreenDeck";
 import ScreenDeckAdd from "./App/screens/ScreenDeckAdd";
+import ScreenCard from "./App/screens/ScreenCard";
 
 const StackNavigator = createStackNavigator({
 	Decks: {screen: ScreenDeck},
-	Add: {screen: ScreenDeckAdd}
+	"Add Deck": {screen: ScreenDeckAdd},
+	Card: {screen: ScreenCard},
 });
 
 const AppContainer = createAppContainer(StackNavigator);
@@ -18,7 +20,7 @@ const App = () => {
 		<Provider>
 			<AppContainer/>
 		</Provider>
-	)
+	);
 }
 
 export default App;

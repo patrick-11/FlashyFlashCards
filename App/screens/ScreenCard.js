@@ -5,7 +5,7 @@ import {Subscribe} from "unstated";
 import DeckList from "../components/DeckList";
 import DeckContainer from "../container/DeckContainer";
 
-const ScreenDeck = (props) => {
+const ScreenCard = (props) => {
     return (
         <Subscribe to = {[DeckContainer]}>
             {
@@ -20,10 +20,11 @@ const ScreenDeck = (props) => {
     );
 }
 
-ScreenDeck.navigationOptions = ({navigation}) => {
+ScreenCard.navigationOptions = ({navigation}) => {
 	return {
-		headerRight: <Button title = "Add" onPress = {() => navigation.navigate("Add Deck")}/>
+        headerTitle: navigation.getParam("deckName"),
+		headerRight: <Button title = "Edit" onPress = {() => alert("TEST")}/>
 	};
 };
 
-export default ScreenDeck;
+export default ScreenCard;

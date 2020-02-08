@@ -22,4 +22,8 @@ export default class DeckContainer extends PersistContainer {
     getDecks = () => {
         return this.state.decks;
     }
+
+    addDecks = (deck) => {
+        this.setState((prev) => [deck, ...prev.decks]);
+    }
 }

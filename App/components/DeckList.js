@@ -8,7 +8,12 @@ const DeckList = (props) => {
         <View>
             <FlatList
                 data = {props.container.getDecks()}
-                renderItem = {(deck) => (<Deck deck = {deck}/>)}
+                renderItem = {(deck) => (
+                    <Deck
+                        navigation = {props.navigation}
+                        deck = {deck}
+                    />
+                )}
                 keyExtractor = {(_, index) => index.toString()}
             />
         </View>
