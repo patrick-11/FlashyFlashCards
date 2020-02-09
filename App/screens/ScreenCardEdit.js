@@ -1,10 +1,10 @@
 import React from "react";
 import {Subscribe} from "unstated";
 
-import Card from "../components/Card";
+import CardEdit from "../components/CardEdit";
 import DeckContainer from "../container/DeckContainer";
 
-const ScreenCard = (props) => {
+const ScreenCardEdit = (props) => {
 
     const {deckName} = props.route.params;
 
@@ -12,7 +12,7 @@ const ScreenCard = (props) => {
         <Subscribe to = {[DeckContainer]}>
             {
                 (deckContainer) => (
-                    <Card
+                    <CardEdit
                         navigation = {props.navigation}
                         container = {deckContainer}
                         deckName = {deckName}
@@ -23,4 +23,4 @@ const ScreenCard = (props) => {
     );
 }
 
-export default ScreenCard;
+export default ScreenCardEdit;

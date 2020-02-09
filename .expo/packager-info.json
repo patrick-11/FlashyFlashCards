@@ -3,8 +3,8 @@
   "expoServerPort": null,
   "packagerPort": null,
   "packagerPid": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null,
+  "expoServerNgrokUrl": "https://72-x3e.aryados11.flashyflashcards.exp.direct",
+  "packagerNgrokUrl": "https://packager.72-x3e.aryados11.flashyflashcards.exp.direct",
+  "ngrokPid": 22935,
   "webpackServerPort": null
 }

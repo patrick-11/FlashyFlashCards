@@ -12,9 +12,8 @@ const DeckAdd = (props) => {
     });
 
     const onPress = () => {
-        if(deckName.length > 3) {
+        if(deckName.length > 0) {
             props.container.addDeck({name: deckName, cards: []});
-            console.log(props.container.getDecks())
             props.navigation.navigate("Decks");
         }
         else {

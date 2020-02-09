@@ -12,6 +12,7 @@ export default class DeckContainer extends PersistContainer {
         this.state = {
             decks: deck
         }
+        //AsyncStorage.clear();
     }
 
 	persist = {
@@ -25,5 +26,14 @@ export default class DeckContainer extends PersistContainer {
 
     addDeck = (deck) => {
         this.setState((curr) => ({decks: [...curr.decks, deck]}));
+    }
+
+    deleteDeck = (deckName) => {
+        const decks = this.state.decks.filter(deck => deck.name !== deckName);
+        this.setState({decks: decks});
+    }
+
+    getDeck = (deckName) => {
+        return this.state.decks.filter(deck => deck.name === deckName);
     }
 }
