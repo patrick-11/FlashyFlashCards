@@ -1,26 +1,33 @@
 import React from "react";
-import {createAppContainer} from "react-navigation";
-import {createStackNavigator} from "react-navigation-stack";
+import {NavigationContainer} from "@react-navigation/native";
+import {createStackNavigator} from "@react-navigation/stack";
 import {Provider} from "unstated";
 
 import ScreenDeck from "./App/screens/ScreenDeck";
 import ScreenDeckAdd from "./App/screens/ScreenDeckAdd";
 import ScreenCard from "./App/screens/ScreenCard";
 
-const StackNavigator = createStackNavigator({
-	Decks: {screen: ScreenDeck},
-	"Add Deck": {screen: ScreenDeckAdd},
-	Card: {screen: ScreenCard},
-});
+const Stack = createStackNavigator();
 
-const AppContainer = createAppContainer(StackNavigator);
+const StackNavigator = () => {
+	return (
+		<Provider>
+			<Stack.Navigator>
+				<Stack.Screen name = "Decks" component = {ScreenDeck}/>
+				<Stack.Screen name = "Add Deck" component = {ScreenDeckAdd}/>
+				<Stack.Screen name = "Cards" component = {ScreenCard}/>
+			</Stack.Navigator>
+		</Provider>
+	);
+}
 
 const App = () => {
 	return (
-		<Provider>
-			<AppContainer/>
-		</Provider>
+	<NavigationContainer>
+		<StackNavigator/>
+	</NavigationContainer>
 	);
+
 }
 
 export default App;

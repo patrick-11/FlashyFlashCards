@@ -1,9 +1,14 @@
 import React from "react";
-import {View, FlatList} from "react-native";
+import {View, FlatList, Button} from "react-native";
 
 import Deck from "../components/Deck";
 
 const DeckList = (props) => {
+
+    props.navigation.setOptions({
+        headerRight: () => <Button title = "Add" onPress = {() => props.navigation.navigate("Add Deck")}/>
+    });
+
     return (
         <View>
             <FlatList
