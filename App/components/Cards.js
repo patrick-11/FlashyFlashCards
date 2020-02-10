@@ -1,6 +1,6 @@
 import React from "react";
 import {View, Button} from "react-native";
-import {Card, CardItem, Body} from "native-base";
+import {Card, CardItem, Body, Icon} from "native-base";
 
 import CardFront from "./CardFront";
 import CardBack from "./CardBack";
@@ -14,6 +14,7 @@ const Cards = (props) => {
     const [time, setTime] = React.useState(Date.now());
 
     props.navigation.setOptions({
+        headerTitle: props.deckName,
         headerRight: () => <Button title = "Edit" onPress = {() => props.navigation.navigate("Edit", {deckName: props.deckName, currCard: currCard()})}/>
     });
 
