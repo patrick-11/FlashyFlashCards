@@ -8,10 +8,10 @@ const DeckAdd = (props) => {
     const [deckName, setDeckName] = React.useState("");
 
     props.navigation.setOptions({
-        headerRight: () => <Button title = "Save" onPress = {() => onPress()}/>
+        headerRight: () => <Button title = "Save" onPress = {() => deckAdd()}/>
     });
 
-    const onPress = () => {
+    const deckAdd = () => {
         if(deckName.length > 0) {
             props.container.addDeck({name: deckName, cards: []});
             props.navigation.navigate("Decks");

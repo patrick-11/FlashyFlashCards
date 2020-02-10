@@ -9,7 +9,7 @@ import CardStats from "./CardStats";
 const Card = (props) => {
 
     const [front, setFront] = React.useState(true);
-    const [cards, setCards] = React.useState(props.container.getDeck(props.deckName)[0].cards);
+    const [cards, setCards] = React.useState(props.container.getDeck(props.deckName).cards);
     const [answered, setAnswered] = React.useState([]);
 
     props.navigation.setOptions({

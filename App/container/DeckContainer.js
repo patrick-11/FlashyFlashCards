@@ -34,6 +34,13 @@ export default class DeckContainer extends PersistContainer {
     }
 
     getDeck = (deckName) => {
-        return this.state.decks.filter(deck => deck.name === deckName);
+        return this.state.decks.find(deck => deck.name === deckName);
+    }
+
+    renameDeck = (deckName, newDeckName) => {
+        const deck = this.getDeck(deckName);
+        this.deleteDeck(deckName);
+        deck.name = newDeckName;
+        this.addDeck(deck);
     }
 }
