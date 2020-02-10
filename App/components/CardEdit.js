@@ -17,11 +17,17 @@ const CardEdit = (props) => {
         props.navigation.navigate("Add Card", {deckName: props.deckName});
     }
 
+    const deleteCard = () => {
+        props.container.deleteCard(props.deckName, props.currCard);
+        props.navigation.navigate("Decks");
+    }
+
     return (
         <View>
             <Button title = "Delete Deck" onPress = {() => {deleteDeck()}}/>
             <Button title = "Rename Deck" onPress = {() => {renameDeck()}}/>
             <Button title = "Add Card" onPress = {() => {addCard()}}/>
+            <Button title = "Delete Current Card" onPress = {() => {deleteCard()}}/>
         </View>
     );
 }

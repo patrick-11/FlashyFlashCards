@@ -6,7 +6,7 @@ import DeckContainer from "../container/DeckContainer";
 
 const ScreenCardEdit = (props) => {
 
-    const {deckName} = props.route.params;
+    const {deckName, currCard} = props.route.params;
 
     return (
         <Subscribe to = {[DeckContainer]}>
@@ -16,6 +16,7 @@ const ScreenCardEdit = (props) => {
                         navigation = {props.navigation}
                         container = {deckContainer}
                         deckName = {deckName}
+                        currCard = {currCard}
                     />
                 )
             }

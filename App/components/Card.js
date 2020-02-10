@@ -13,7 +13,7 @@ const Card = (props) => {
     const [answered, setAnswered] = React.useState([]);
 
     props.navigation.setOptions({
-        headerRight: () => <Button title = "Edit" onPress = {() => props.navigation.navigate("Edit", {deckName: props.deckName})}/>
+        headerRight: () => <Button title = "Edit" onPress = {() => props.navigation.navigate("Edit", {deckName: props.deckName, currCard: currCard()})}/>
     });
 
     const cardsLeft = () => cards.length > 0;

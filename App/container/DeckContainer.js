@@ -50,4 +50,11 @@ export default class DeckContainer extends PersistContainer {
         deck.cards.push(card);
         this.addDeck(deck);
     }
+
+    deleteCard = (deckName, card) => {
+        const deck = this.getDeck(deckName);
+        this.deleteDeck(deckName);
+        deck.cards = deck.cards.filter(_card => (_card.front !== card.front && _card.back !== card.back));
+        this.addDeck(deck);
+    }
 }
