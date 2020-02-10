@@ -10,13 +10,18 @@ const CardEdit = (props) => {
     }
 
     const renameDeck = () => {
-        props.navigation.navigate("Rename", {deckName: props.deckName});
+        props.navigation.navigate("Rename Deck", {deckName: props.deckName});
+    }
+
+    const addCard = () => {
+        props.navigation.navigate("Add Card", {deckName: props.deckName});
     }
 
     return (
         <View>
             <Button title = "Delete Deck" onPress = {() => {deleteDeck()}}/>
             <Button title = "Rename Deck" onPress = {() => {renameDeck()}}/>
+            <Button title = "Add Card" onPress = {() => {addCard()}}/>
         </View>
     );
 }

@@ -25,7 +25,7 @@ export default class DeckContainer extends PersistContainer {
     }
 
     addDeck = (deck) => {
-        this.setState((curr) => ({decks: [...curr.decks, deck]}));
+        this.setState((curr) => ({decks: [deck, ...curr.decks]}));
     }
 
     deleteDeck = (deckName) => {
@@ -41,6 +41,13 @@ export default class DeckContainer extends PersistContainer {
         const deck = this.getDeck(deckName);
         this.deleteDeck(deckName);
         deck.name = newDeckName;
+        this.addDeck(deck);
+    }
+
+    addCard = (deckName, card) => {
+        const deck = this.getDeck(deckName);
+        this.deleteDeck(deckName);
+        deck.cards.push(card);
         this.addDeck(deck);
     }
 }
