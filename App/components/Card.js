@@ -11,6 +11,7 @@ const Card = (props) => {
     const [front, setFront] = React.useState(true);
     const [cards, setCards] = React.useState(props.container.getDeck(props.deckName).cards);
     const [answered, setAnswered] = React.useState([]);
+    const [time, setTime] = React.useState(Date.now());
 
     props.navigation.setOptions({
         headerRight: () => <Button title = "Edit" onPress = {() => props.navigation.navigate("Edit", {deckName: props.deckName, currCard: currCard()})}/>
@@ -27,16 +28,20 @@ const Card = (props) => {
 
     const flip = () => setFront(!front);
 
+    const getTime = () => Date.now() - time;
+
     const answer = (answer) => {
-        const newAnswer = {card: currCard(), answer: answer};
+        const newAnswer = {card: currCard(), answer: answer, time: getTime()};
         setAnswered([newAnswer, ...answered]);
         popCurrCard();
         flip();
+        setTime(Date.now());
 	}
 
 	const orderCards = () => {
-		const right = answered.filter(card => card.answer);
-		const wrong = answered.filter(card => !card.answer);
+        const longTimeFirst = (a, b) => {a.time > b.time};
+		const right = answered.filter(card => card.answer).sort(longTimeFirst);
+		const wrong = answered.filter(card => !card.answer).sort(longTimeFirst);
 
 		return [
 			...wrong.map(answer => answer.card),
