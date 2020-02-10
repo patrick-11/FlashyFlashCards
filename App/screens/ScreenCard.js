@@ -1,7 +1,7 @@
 import React from "react";
 import {Subscribe} from "unstated";
 
-import Card from "../components/Card";
+import Cards from "../components/Cards";
 import DeckContainer from "../container/DeckContainer";
 
 const ScreenCard = (props) => {
@@ -12,7 +12,7 @@ const ScreenCard = (props) => {
         <Subscribe to = {[DeckContainer]}>
             {
                 (deckContainer) => (
-                    <Card
+                    <Cards
                         navigation = {props.navigation}
                         container = {deckContainer}
                         deckName = {deckName}

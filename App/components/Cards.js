@@ -1,12 +1,12 @@
 import React from "react";
-import {View, Text, Button} from "react-native";
-import {ListItem, Right, Body, Icon} from "native-base";
+import {View, Button} from "react-native";
+import {Card, CardItem, Body} from "native-base";
 
 import CardFront from "./CardFront";
 import CardBack from "./CardBack";
 import CardStats from "./CardStats";
 
-const Card = (props) => {
+const Cards = (props) => {
 
     const [front, setFront] = React.useState(true);
     const [cards, setCards] = React.useState(props.container.getDeck(props.deckName).cards);
@@ -45,9 +45,8 @@ const Card = (props) => {
 
 		return [
 			...wrong.map(answer => answer.card),
-			...cards,
-			...right.map(answer => answer.card),
-		]
+			...right.map(answer => answer.card)
+        ];
 	}
 	
 	const restart = () => {
@@ -62,18 +61,19 @@ const Card = (props) => {
                 front ?
                     <CardFront front = {currCard().front} flip = {flip}/>
                     :
-                    <CardBack back = {currCard().back} flip = {answer}/>
+                    <CardBack card = {currCard()} flip = {answer}/>
                 :
-                <View>
-                    <CardStats cards = {cards} answered = {answered}/>
-                    <Button title = "Restart" onPress = {() => {restart()}}/>
-                </View>
-
+                <Card>
+                    <CardStats answered = {answered}/>
+                    <CardItem bordered>
+                        <Body style = {{alignItems: "center"}}>
+                            <Button title = "Restart" onPress = {() => {restart()}}/>
+                        </Body>
+                    </CardItem>
+                </Card>
             }
-
-
         </View>
     );
 }
 
-export default Card;
+export default Cards;
