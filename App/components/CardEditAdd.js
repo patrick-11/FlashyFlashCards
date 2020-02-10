@@ -1,6 +1,6 @@
 import React from "react";
-import {View, Text, Button} from "react-native";
-import {Item, Input} from "native-base";
+import {View, Button} from "react-native";
+import {Item, Input, Card} from "native-base";
 
 const CardEditAdd = (props) => {
 
@@ -23,20 +23,22 @@ const CardEditAdd = (props) => {
 
     return (
         <View>
-            <Item>
-                <Input
-                    placeholder = "Front"
-                    value = {front}
-                    onChangeText = {(front) => setFront(front)}
-                />
-            </Item>
-            <Item>
-                <Input
-                    placeholder = "Back"
-                    value = {back}
-                    onChangeText = {(back) => setBack(back)}
-                />
-            </Item>
+            <Card>
+                <Item>
+                    <Input
+                        placeholder = "Front"
+                        value = {front}
+                        onChangeText = {(front) => setFront(front)}
+                    />
+                </Item>
+                <Item>
+                    <Input
+                        placeholder = "Back"
+                        value = {back}
+                        onChangeText = {(back) => setBack(back)}
+                    />
+                </Item>
+            </Card>
         </View>
     );
 }

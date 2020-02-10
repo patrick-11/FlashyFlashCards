@@ -10,7 +10,7 @@ const DeckList = (props) => {
     });
 
     return (
-        <View>
+        <View style = {{flex: 1}}>
             <FlatList
                 data = {props.container.getDecks()}
                 renderItem = {(deck) => (

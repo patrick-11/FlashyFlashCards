@@ -1,6 +1,6 @@
 import React from "react";
-import {View, Text, Button} from "react-native";
-import {Item, Input} from "native-base";
+import {View, Button} from "react-native";
+import {Item, Input, Card} from "native-base";
 
 const CardEditRename = (props) => {
 
@@ -22,13 +22,15 @@ const CardEditRename = (props) => {
 
     return (
         <View>
-            <Item>
-                <Input
-                    placeholder = "Name"
-                    value = {newDeckName}
-                    onChangeText = {(newDeckName) => setNewDeckName(newDeckName)}
-                />
-            </Item>
+            <Card>
+                <Item>
+                    <Input
+                        placeholder = "Name"
+                        value = {newDeckName}
+                        onChangeText = {(newDeckName) => setNewDeckName(newDeckName)}
+                    />
+                </Item>
+            </Card>
         </View>
     );
 }

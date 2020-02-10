@@ -1,6 +1,6 @@
 import React from "react";
-import { AsyncStorage } from "react-native";
-import { PersistContainer } from "unstated-persist";
+import {AsyncStorage} from "react-native";
+import {PersistContainer} from "unstated-persist";
 
 import deck from "../data/flashcards";
 

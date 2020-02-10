@@ -1,6 +1,6 @@
 import React from "react";
-import {View, Text, Button} from "react-native";
-import {ListItem, Right, Body, Icon} from "native-base";
+import {Button} from "react-native";
+import {Card, CardItem, Body} from "native-base";
 
 const CardEdit = (props) => {
 
@@ -23,12 +23,28 @@ const CardEdit = (props) => {
     }
 
     return (
-        <View>
-            <Button title = "Delete Deck" onPress = {() => {deleteDeck()}}/>
-            <Button title = "Rename Deck" onPress = {() => {renameDeck()}}/>
-            <Button title = "Add Card" onPress = {() => {addCard()}}/>
-            <Button title = "Delete Current Card" onPress = {() => {deleteCard()}}/>
-        </View>
+        <Card>
+            <CardItem bordered>
+                <Body style = {{alignItems: "center"}}>
+                    <Button title = "Delete Deck" onPress = {() => {deleteDeck()}}/>
+                </Body>
+            </CardItem>
+            <CardItem bordered>
+                <Body style = {{alignItems: "center"}}>
+                    <Button title = "Rename Deck" onPress = {() => {renameDeck()}}/>
+                </Body>
+            </CardItem>
+            <CardItem bordered>
+                <Body style = {{alignItems: "center"}}>
+                    <Button title = "Add Card" onPress = {() => {addCard()}}/>
+                </Body>
+            </CardItem>
+            <CardItem bordered>
+                <Body style = {{alignItems: "center"}}>
+                    <Button title = "Delete Current Card" onPress = {() => {deleteCard()}}/>
+                </Body>
+            </CardItem>
+        </Card>
     );
 }
 

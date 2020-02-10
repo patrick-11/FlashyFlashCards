@@ -1,6 +1,6 @@
 import React from "react";
 import {View, Button} from "react-native";
-import {Item, Input} from "native-base";
+import {Item, Input, Card} from "native-base";
 
 
 const DeckAdd = (props) => {
@@ -23,13 +23,15 @@ const DeckAdd = (props) => {
 
     return (
         <View>
-            <Item>
-                <Input
-                    placeholder = "Name"
-                    value = {deckName}
-                    onChangeText = {(deckName) => setDeckName(deckName)}
-                />
-            </Item>
+            <Card>
+                <Item>
+                    <Input
+                        placeholder = "Name"
+                        value = {deckName}
+                        onChangeText = {(deckName) => setDeckName(deckName)}
+                    />
+                </Item>
+            </Card>
         </View>
     );
 }
