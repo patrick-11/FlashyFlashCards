@@ -36,7 +36,7 @@ The user can select one of the decks. The front of the card is shown and the use
 
 ## Technologies
 
-* JavaScript, React, React Native, React Navigation, NativeBase
+* JavaScript (JS), React, React Native, React Navigation, NativeBase
 
 ## Launch
 
