@@ -12,7 +12,7 @@ Simple mobile flash card application created in [React Native](https://facebook.
 
 ## General info
 
-The user can select one of the decks. The front of the card is shown and the user has to guess the answer. After the user answered all cards, the user can see his/her score and restart the game. After the first run the cards will be probably in a different order. First all cards that were guessed wrong are shown (sorted by time to answer). Then all cards that wer guessed right are shown (sorted by time to answer).
+The user can select one of the decks. The front of the card is shown and the user has to guess the answer. After the user guessed all cards, the user can see his/her score and restart the game. Also after the first run the cards will be probably in a different order. First all cards that were guessed wrong are shown (sorted by time taken to answer). Then all cards that were guessed right are shown (sorted by time taken to answer).
 
 ## iOS App Preview
 
