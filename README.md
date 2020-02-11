@@ -16,7 +16,9 @@ The user can select one of the decks. The front of the card is shown and the use
 
 ## iOS App Preview
 
-* Pics
+![Decks](Preview/ios_decks.png)
+![Flip](Preview/ios_flip.png)
+![Guess](Preview/ios_guess.png)
 
 ## Android App Preview
 
@@ -36,7 +38,10 @@ The user can select one of the decks. The front of the card is shown and the use
 
 ## Technologies
 
-* JavaScript, React, React Native, React Navigation, NativeBase
+* JavaScript, React, React Native
+* Navigation: React Navigation
+* Persistency: Unstated Persist
+* Style: NativeBase
 
 ## Launch
 
