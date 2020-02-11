@@ -16,9 +16,10 @@ The user can select one of the decks. The front of the card is shown and the use
 
 ## iOS App Preview
 
-![Decks](Preview/ios_decks.png)
-![Flip](Preview/ios_flip.png)
-![Guess](Preview/ios_guess.png)
+<img src = "Preview/ios_decks.png" height = "700">
+<img src = "Preview/ios_flip.png" height = "700">
+<img src = "Preview/ios_guess.png" height = "700">
+
 
 ## Android App Preview
 
