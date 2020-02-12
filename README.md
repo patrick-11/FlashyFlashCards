@@ -5,6 +5,8 @@ Simple mobile flash card application created in [React Native](https://facebook.
 ## Table of Contents
 
 * [General info](#general-info)
+* [iOS App Preview](#ios-app-preview)
+* [Android App Preview](#android-app-preview)
 * [Features](#features)
 * [Technologies](#technologies)
 * [Launch](#launch)
@@ -22,10 +24,13 @@ The user can select one of the decks. The front of the card is shown and the use
     <img src = "Preview/ios_guess.png" height = "500">
 </p>
 
-
 ## Android App Preview
 
-* Pics
+<p float = "left">
+    <img src = "Preview/android_decks.png" height = "500">
+    <img src = "Preview/android_flip.png" height = "500">
+    <img src = "Preview/android_guess.png" height = "500">
+</p>
 
 ## Features
 
@@ -47,12 +52,6 @@ The user can select one of the decks. The front of the card is shown and the use
 * Style: NativeBase
 
 ## Launch
-
-### Expo
-
-* Try the App on Expo (link)
-
-### Setup
 
 ```
 $ cd ../FlashyFlashCards
