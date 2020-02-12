@@ -14,7 +14,7 @@ const Stack = createStackNavigator();
 
 const StackNavigator = () => {
 	return (
-		<Provider>
+		<NavigationContainer>
 			<Stack.Navigator>
 				<Stack.Screen name = "Decks" component = {ScreenDeck}/>
 				<Stack.Screen name = "Add Deck" component = {ScreenDeckAdd}/>
@@ -23,15 +23,15 @@ const StackNavigator = () => {
 				<Stack.Screen name = "Rename Deck" component = {ScreenCardEditRename}/>
 				<Stack.Screen name = "Add Card" component = {ScreenCardEditAdd}/>
 			</Stack.Navigator>
-		</Provider>
+		</NavigationContainer>
 	);
 }
 
 const App = () => {
 	return (
-	<NavigationContainer>
+	<Provider>
 		<StackNavigator/>
-	</NavigationContainer>
+	</Provider>
 	);
 
 }
