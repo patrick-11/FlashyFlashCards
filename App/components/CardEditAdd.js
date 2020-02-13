@@ -8,17 +8,12 @@ const CardEditAdd = (props) => {
     const [back, setBack] = React.useState("");
 
     props.navigation.setOptions({
-        headerRight: () => <Button title = "Save" onPress = {() => {addCard()}}/>
+        headerRight: () => <Button title = "Save" disabled = {!(front && back)} onPress = {() => {addCard()}}/>
     });
 
     const addCard = () => {
-        if(front.length > 0 && back.length > 0) {
-            props.container.addCard(props.deckName, {front: front, back: back});
-            props.navigation.navigate("Decks");
-        }
-        else {
-            alert("Enter front and back!")
-        }
+        props.container.addCard(props.deckName, {front: front, back: back});
+        props.navigation.navigate("Decks");
     }
 
     return (
