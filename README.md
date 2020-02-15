@@ -9,7 +9,7 @@ Simple mobile flash card application created in [React Native](https://facebook.
 * [Android App Preview](#android-app-preview)
 * [Features](#features)
 * [Technologies](#technologies)
-* [Launch](#launch)
+* [Setup](#setup)
 * [Sources](#sources)
 
 ## General info
@@ -51,10 +51,12 @@ The user can select one of the decks. The front of the card is shown and the use
 * Persistency: Unstated Persist
 * Style: NativeBase
 
-## Launch
+## Setup
+
+Assuming that you have Node 10 LTS or greater installed and cloned the repository.
 
 ```
-$ cd ../FlashyFlashCards
+$ cd FlashyFlashCards/
 $ npm install
 $ npm start
 ```
