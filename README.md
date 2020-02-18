@@ -46,10 +46,12 @@ The user can select one of the decks. The front of the card is shown and the use
 
 ## Technologies
 
-* JavaScript, React, React Native
-* Navigation: React Navigation
-* Persistency: Unstated Persist
-* Style: NativeBase
+* **Language**: JavaScript
+    * **Library**: React
+    * **Framework**: React Native
+* **Navigation**: React Navigation: Stack-Navigator
+* **Persistency**: Unstated Persist
+* **Style**: NativeBase
 
 ## Setup
 
